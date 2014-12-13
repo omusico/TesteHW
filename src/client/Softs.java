@@ -1,7 +1,9 @@
 package client;
 
-public class Softs {
+import java.util.List;
 
+public class Softs {
+	private List<Software> softwareList;
 	private boolean office, corel, autoCad;
 
 	public boolean isOffice() {

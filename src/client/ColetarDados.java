@@ -8,7 +8,7 @@ import java.math.BigInteger;
 import java.net.InetAddress;
 
 public class ColetarDados {
-	InetAddress ip;
+	private final InetAddress ip;
 
 	public String getHostName() {
 		return this.ip.getHostName();

@@ -1,5 +1,7 @@
 package client;
 
+import java.util.List;
+
 public class Maquina {
 	private String nomeMaquina;
 	private String usuario;
@@ -9,6 +11,7 @@ public class Maquina {
 	private String aquitetura;
 	private String Processador;
 	private int memoria;
+	private List<Software> softwareList;
 
 	public String getNomeMaquina() {
 		return this.nomeMaquina;

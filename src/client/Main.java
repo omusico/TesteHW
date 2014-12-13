@@ -7,14 +7,7 @@ public class Main {
 		final ColetarDados dados;
 		try {
 			dados = new ColetarDados();
-			maquina.setNomeMaquina(dados.getHostName());
-			maquina.setUsuario(dados.getNomeUsuario());
-			maquina.setIp(dados.getHostAddress());
-			maquina.setSistemaOperacional(dados.getSO());
-			maquina.setAquitetura(dados.getArquitetura());
-			maquina.setProcessador(dados.getCpuModel());
-			dados.listaSoftware(maquina);
-			maquina.setMemoria(dados.getMemoriaTotal());
+			SetUp(maquina, dados);
 		} catch (final Exception e) {
 			e.printStackTrace();
 		}
@@ -30,5 +23,17 @@ public class Main {
 		System.out.println(maquina.getUsuario());
 		System.out.println(maquina.getMemoria());
 
+	}
+
+	public static void SetUp(final Maquina maquina, final ColetarDados dados)
+			throws Exception {
+		maquina.setNomeMaquina(dados.getHostName());
+		maquina.setUsuario(dados.getNomeUsuario());
+		maquina.setIp(dados.getHostAddress());
+		maquina.setSistemaOperacional(dados.getSO());
+		maquina.setAquitetura(dados.getArquitetura());
+		maquina.setProcessador(dados.getCpuModel());
+		dados.listaSoftware(maquina);
+		maquina.setMemoria(dados.getMemoriaTotal());
 	}
 }
